@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drawing Art Informasi Tugas</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+
+<body>
+<canvas id="particleCanvas"></canvas>
+
+<header>
+  <button class="dark-toggle" id="darkToggle">Dark Mode</button>
+  <h1>Drawing Art Community</h1>
+  <p>Portal resmi informasi tugas dan hasil karya terbaik</p>
+  <div class="countdown" id="countdown"></div>
+  <div class="countdown" id="nextCountdown"></div>
+
+  <div class="ref-preview">
+    <img src="https://i.ibb.co/chZz6NQw/de6990746352b65ab6213ee2deeb6a47.gif">
+  </div>
+</header>
+
+<main class="container">
+
+<section class="card">
+<h2>Informasi Tugas</h2>
+<div class="info-grid">
+<div class="info-item"><b>Tugas:</b> Waifu / Husbu</div>
+<div class="info-item"><b>Teknik:</b> Tradi / Digital</div>
+<div class="info-item"><b>Format:</b> Coloring / BNW</div>
+<div class="info-item"><b>Pengumpulan:</b> Grup Tugas</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Juara Terbaik Minggu Ini</h2>
+<div class="winners">
+
+<div class="winner">
+<img src="https://i.ibb.co/xSnvhFDs/IMG-20260104-104137.jpg">
+<div class="winner-body">
+<h3>Juara 1</h3>
+<span class="badge gold">Juara 1</span>
+<button class="fullview-btn" data-img="https://i.ibb.co/xSnvhFDs/IMG-20260104-104137.jpg">Full View</button>
+</div>
+</div>
+
+<div class="winner">
+<img src="https://i.ibb.co/NgcKV7HJ/IMG-20260104-104211.jpg">
+<div class="winner-body">
+<h3>Juara 2</h3>
+<span class="badge silver">Juara 2</span>
+<button class="fullview-btn" data-img="https://i.ibb.co/NgcKV7HJ/IMG-20260104-104211.jpg">Full View</button>
+</div>
+</div>
+
+<div class="winner">
+<img src="https://i.ibb.co/SwP9SRL7/IMG-20260104-104245.jpg">
+<div class="winner-body">
+<h3>Juara 3</h3>
+<span class="badge bronze">Juara 3</span>
+<button class="fullview-btn" data-img="https://i.ibb.co/SwP9SRL7/IMG-20260104-104245.jpg">Full View</button>
+</div>
+</div>
+
+</div>
+</section>
+</main>
+
+<footer>© 2025 Drawing Assignment Portal</footer>
+
+<!-- MODAL FULL IMAGE -->
+<div class="modal" id="imageModal">
+  <img id="modalImg">
+</div>
+
+<!-- MUSIC PLAYER -->
+<div class="music-player">
+🎵
+<button id="musicBtn">Play Music</button>
+<input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+<audio id="bgMusic" loop>
+  <source src="assets/Michishirube.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<!-- BUTTON SARAN -->
+<button class="saran-btn" id="openSaran">💬 Saran</button>
+
+<!-- POPUP SARAN -->
+<div class="saran-modal" id="saranModal">
+<div class="saran-box">
+<h3>Saran untuk Admin</h3>
+<input id="nama" placeholder="Nama / Kontak WA">
+<textarea id="pesan" placeholder="Ucapan / Saran ke Admin"></textarea>
+
+<div class="saran-action">
+<button id="kirimSaran">Kirim</button>
+<button class="close" id="closeSaran">Tutup</button>
+</div>
+</div>
+</div>
+
+<script src="js/firebase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
